@@ -14,7 +14,7 @@
 @section('sidebar')
     @parent
 
-    @php $current=2; @endphp
+    @php $current=1; @endphp
     @foreach ($categories as $category)
         @for ($i = $current; $i < $category->depth; $i++)
             <ul>
@@ -27,7 +27,7 @@
             <a href="{{ route('news_categories.show',[$category->id]) }}" class="nav-link">{{ $category->name }} ({{$category->user->name}}) </a>
         </li>
     @endforeach
-    @for ($i = 2; $i < $current; $i++)
+    @for ($i = 1; $i < $current; $i++)
         </ul>
     @endfor
 @endsection

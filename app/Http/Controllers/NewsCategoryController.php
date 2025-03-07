@@ -42,8 +42,8 @@ class NewsCategoryController extends Controller
         $news       = [];
 
         try{
-            $categories      = $this->newsCategoryService->getTree();
-            $news            = $this->newsService->getCategoryNews($id);
+            $categories = $this->newsCategoryService->getTree();
+            $news       = $this->newsService->getCategoryNews($id);
         }catch(Exception $exception){
             //todo
             error_log($exception->getMessage());
